@@ -1,0 +1,57 @@
+.appContainer {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb; /* Cinza claro */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: #374151; /* Cinza escuro */
+}
+
+.appContainer h1 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: #1f2937; /* Cinza mais escuro */
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.appContent {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.9); /* Branco com transparência */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+@media (max-width: 768px) {
+  .appContent {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .appContainer h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .appContainer {
+    background-color: #1f2937; /* Cinza escuro */
+    color: #e5e7eb; /* Cinza claro */
+  }
+
+  .appContainer h1 {
+    color: #f3f4f6; /* Branco suave */
+  }
+
+  .appContent {
+    background: rgba(39, 39, 42, 0.9); /* Cinza muito escuro com transparência */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+  }
+}

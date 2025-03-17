@@ -1,0 +1,179 @@
+/* Estilos para a Lista de Tarefas */
+.taskList {
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #ffffff; /* Branco */
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.taskList h2 {
+  font-size: clamp(1.8rem, 4vw, 2rem);
+  color: #1f2937; /* Cinza escuro */
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.taskList ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb; /* Cinza claro */
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: var(--border-radius);
+}
+
+.taskList li:hover {
+  background-color: #f3f4f6; /* Cinza muito claro */
+}
+
+.taskList li.completed {
+  background-color: #d1fae5; /* Verde claro */
+  text-decoration: line-through;
+  color: #6b7280; /* Cinza médio */
+}
+
+/* Botões */
+.taskList button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  width: 100%; /* Botões ocupam 100% da largura */
+  margin-bottom: 0.5rem; /* Espaço entre os botões */
+}
+
+/* Botão Editar */
+.taskList .editButton {
+  background-color: #3b82f6; /* Azul */
+  color: white;
+}
+
+.taskList .editButton:hover {
+  background-color: #2563eb; /* Azul mais escuro */
+  transform: scale(1.05);
+}
+
+.taskList .editButton:active {
+  transform: scale(1);
+}
+
+/* Botão Excluir */
+.taskList .deleteButton {
+  background-color: #ef4444; /* Vermelho */
+  color: white;
+}
+
+.taskList .deleteButton:hover {
+  background-color: #dc2626; /* Vermelho mais escuro */
+  transform: scale(1.05);
+}
+
+.taskList .deleteButton:active {
+  transform: scale(1);
+}
+
+/* Botão Marcar como Concluída */
+.taskList .completeButton {
+  background-color: #10b981; /* Verde */
+  color: white;
+}
+
+.taskList .completeButton:hover {
+  background-color: #059669; /* Verde mais escuro */
+  transform: scale(1.05);
+}
+
+.taskList .completeButton:active {
+  transform: scale(1);
+}
+
+/* Alinhamento vertical dos botões */
+.taskList .buttonGroup {
+  display: flex;
+  flex-direction: column; /* Alinha os botões verticalmente */
+  gap: 0.5rem; /* Espaço entre os botões */
+  width: 100%; /* Garante que os botões ocupem toda a largura */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .taskList {
+    width: 90%;
+  }
+
+  .taskList li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .taskList button {
+    width: 100%;
+  }
+}
+
+/* Modo escuro */
+@media (prefers-color-scheme: dark) {
+  .taskList {
+    background-color: #1f2937; /* Cinza escuro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .taskList h2 {
+    color: #e5e7eb; /* Cinza claro */
+  }
+
+  .taskList li {
+    border-bottom: 1px solid #374151; /* Cinza médio */
+  }
+
+  .taskList li:hover {
+    background-color: #374151; /* Cinza mais escuro */
+  }
+
+  .taskList li.completed {
+    background-color: #065f46; /* Verde escuro */
+    color: #9ca3af; /* Cinza claro */
+  }
+
+  .taskList .editButton {
+    background-color: #2563eb; /* Azul mais escuro */
+  }
+
+  .taskList .editButton:hover {
+    background-color: #1d4ed8; /* Azul ainda mais escuro */
+  }
+
+  .taskList .deleteButton {
+    background-color: #dc2626; /* Vermelho mais escuro */
+  }
+
+  .taskList .deleteButton:hover {
+    background-color: #b91c1c; /* Vermelho ainda mais escuro */
+  }
+
+  .taskList .completeButton {
+    background-color: #059669; /* Verde mais escuro */
+  }
+
+  .taskList .completeButton:hover {
+    background-color: #047857; /* Verde ainda mais escuro */
+  }
+}
