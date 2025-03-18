@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import LoginForm from "./Auth/LoginForm";
 import TaskForm from "./Form/TaskForm";
 import TaskList from "./List/TaskList";
 import styles from "./App.module.css";
@@ -14,6 +15,7 @@ interface Task {
 const App: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [editingTask, setEditingTask] = useState<Task | null>(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   // Função para buscar tarefas
   const fetchTasks = async () => {
@@ -62,6 +64,10 @@ const App: React.FC = () => {
   useEffect(() => {
     fetchTasks();
   }, []);
+
+  if (!isAuthenticated) {
+    return <LoginForm onLoginSuccess={() => setIsAuthenticated(true)} />;
+  }
 
   return (
     <div className={styles.appContainer}>
