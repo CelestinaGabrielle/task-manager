@@ -1,5 +1,4 @@
 .form {
-  background-color: #f9fafb; /* Cinza claro */
   padding: 2rem;
   border-radius: var(--border-radius);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -19,7 +18,7 @@
 .label {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #374151; /* Cinza escuro */
+  color: #374151;
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -30,25 +29,25 @@
   width: 100%;
   padding: 0.8rem 1.2rem;
   margin-top: 0.5rem;
-  border: 2px solid #d1d5db; /* Cinza claro */
+  border: 2px solid #d1d5db; 
   border-radius: var(--border-radius);
   font-size: 1rem;
   transition: all 0.3s ease-in-out;
-  background-color: #ffffff; /* Branco */
-  color: #374151; /* Cinza escuro */
+  background-color: #ffffff; 
+  color: #374151; 
 }
 
 .input:focus,
 .textarea:focus,
 .select:focus {
-  border-color: #6366f1; /* Azul suave */
+  border-color: #6366f1; 
   outline: none;
-  background-color: #f3f4f6; /* Cinza muito claro */
-  box-shadow: 0 0 8px rgba(99, 102, 241, 0.3); /* Azul suave */
+  background-color: var(--background-dark);
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.3); 
 }
 
 .button {
-  background-color: #6366f1; /* Azul suave */
+  background-color: #6366f1;
   color: white;
   padding: 0.8rem 1.2rem;
   border: none;
@@ -63,9 +62,9 @@
 }
 
 .button:hover {
-  background-color: #4f46e5; /* Azul mais escuro */
+  background-color: #4f46e5; 
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3); /* Azul mais escuro */
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3); 
 }
 
 .button:active {
@@ -74,7 +73,7 @@
 }
 
 .clearButton {
-  background-color: #ef4444; /* Vermelho suave */
+  background-color: #ef4444;
   color: white;
   padding: 0.8rem 1.2rem;
   border: none;
@@ -89,9 +88,9 @@
 }
 
 .clearButton:hover {
-  background-color: #dc2626; /* Vermelho mais escuro */
+  background-color: #dc2626; 
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3); /* Vermelho mais escuro */
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3); 
 }
 
 .clearButton:active {
@@ -113,42 +112,42 @@
 
 @media (prefers-color-scheme: dark) {
   .form {
-    background-color: #1f2937; /* Cinza escuro */
+    background-color: #1f2937;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
 
   .label {
-    color: #e5e7eb; /* Cinza claro */
+    color: #e5e7eb; 
   }
 
   .input,
   .textarea,
   .select {
-    background-color: #374151; /* Cinza médio */
-    color: #e5e7eb; /* Cinza claro */
-    border-color: #4b5563; /* Cinza escuro */
+    background-color: #374151; 
+    color: #e5e7eb;
+    border-color: #4b5563; 
   }
 
   .input:focus,
   .textarea:focus,
   .select:focus {
     border-color: #6366f1; /* Azul suave */
-    box-shadow: 0 0 8px rgba(99, 102, 241, 0.4); /* Azul suave */
+    box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
   }
 
   .button {
-    background-color: #4f46e5; /* Azul mais escuro */
+    background-color: #4f46e5;
   }
 
   .button:hover {
-    background-color: #4338ca; /* Azul ainda mais escuro */
+    background-color: #4338ca;
   }
 
   .clearButton {
-    background-color: #dc2626; /* Vermelho mais escuro */
+    background-color: #dc2626; 
   }
 
   .clearButton:hover {
-    background-color: #b91c1c; /* Vermelho ainda mais escuro */
+    background-color: #b91c1c; 
   }
 }

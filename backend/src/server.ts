@@ -4,7 +4,6 @@ import cors from "cors";
 import connectDB from "./database/connection";
 import taskRoutes from "./routes/Routes";
 
-// Configurações do ambiente
 dotenv.config();
 
 const app = express();

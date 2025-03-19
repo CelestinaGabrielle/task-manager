@@ -16,8 +16,7 @@ interface TaskListProps {
 }
 
 const TaskList: React.FC<TaskListProps> = ({ tasks, onDelete, onEdit, onComplete }) => {
-  console.log("Tarefas recebidas no TaskList:", tasks); // Verifica as tarefas recebidas
-  
+  console.log("Tarefas recebidas no TaskList:", tasks); 
   if (!tasks || tasks.length === 0) {
     return <p className={styles.noTasks}>Nenhuma tarefa encontrada.</p>;
   }

@@ -15,7 +15,7 @@ const taskSchema: Schema<ITask> = new Schema(
     status: { type: String, default: "pending", enum: ["pending", "completed"] },
   },
   {
-    timestamps: true, // Cria createdAt e updatedAt automaticamente
+    timestamps: true,
   }
 );
 

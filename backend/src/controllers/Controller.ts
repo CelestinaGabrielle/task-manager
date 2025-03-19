@@ -9,8 +9,8 @@ export const createTask = async (req: Request, res: Response): Promise<Response>
     const newTask = new Task({ title, description });
     await newTask.save();
     return res.status(201).json(newTask);
-  } catch (error: unknown) {  // Aqui o tipo de 'error' é unknown
-    // Verificar se o erro tem a propriedade 'message'
+  } catch (error: unknown) { 
+    
     if (error instanceof Error) {
       console.error("Erro ao criar tarefa:", error.message);
       return res.status(500).json({ message: "Erro ao criar tarefa", error: error.message });

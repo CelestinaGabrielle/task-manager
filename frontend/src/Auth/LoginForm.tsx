@@ -12,7 +12,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
   const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(); 
     try {
       const response = await axios.post("http://localhost:5000/api/login", {
         email,
